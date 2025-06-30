@@ -1,6 +1,7 @@
 import openai
 from models.model_interface import ResumeTailorModel
 
+
 class OpenAIModel(ResumeTailorModel):
     def __init__(self, api_key):
         openai.api_key = api_key
@@ -16,10 +17,9 @@ class OpenAIModel(ResumeTailorModel):
         JOB DESCRIPTION: {job_description_text}
         """
         response = openai.ChatCompletion.create(
-            model="gpt-4",
-            messages=[{"role": "user", "content": prompt}]
+            model="gpt-4", messages=[{"role": "user", "content": prompt}]
         )
-        return response.choices[0].message['content']
+        return response.choices[0].message["content"]
 
     def generate_cover_letter(self, resume_json, job_description_text):
         prompt = f"""
@@ -30,7 +30,6 @@ class OpenAIModel(ResumeTailorModel):
         JOB DESCRIPTION: {job_description_text}
         """
         response = openai.ChatCompletion.create(
-            model="gpt-4",
-            messages=[{"role": "user", "content": prompt}]
+            model="gpt-4", messages=[{"role": "user", "content": prompt}]
         )
-        return response.choices[0].message['content']
+        return response.choices[0].message["content"]

@@ -92,6 +92,7 @@ This script takes care of creating or re-activating the Python virtual environme
 * `robot_brain/`: Backend logic, AI models, prompts, utils, output
 * `src/`: Frontend React app
 * `output/`: Generated resumes, cover letters, logs
+* `robot_brain/input/`: Text inputs like the job description
 * `prompts/`: Prompt templates for AI instructions
 
 ---
