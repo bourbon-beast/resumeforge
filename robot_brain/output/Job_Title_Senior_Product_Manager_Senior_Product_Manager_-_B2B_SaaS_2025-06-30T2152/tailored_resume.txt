@@ -1,0 +1,121 @@
+RESUME:
+
+{
+  "personal_info": {
+    "name": "Steven Waters",
+    "title": "Senior Product Manager - B2B SaaS",
+    "email": "steve.g.waters@gmail.com",
+    "phone": "0403 880 495",
+    "linkedin": "http://au.linkedin.com/in/StevenGWaters",
+    "location": "Australia"
+  },
+  "summary": "An experienced product leader with over 2 decades of experience in establishing operations, executing SaaS solutions and transforming businesses; focused on delivering quality outcomes. Proficient in assembling and directing diverse cross-functional teams. A strong track record of scaling B2B SaaS products from MVP to market-ready in global employment and compliance tech.",
+  "core_skills": [
+    "Product Management",
+    "Solution Design",
+    "SaaS Development",
+    "Stakeholder Management",
+    "Compliance Automation",
+    "Team Leadership",
+    "CX & Delivery Alignment"
+  ],
+  "technical_skills": [
+    "Google Cloud Platform",
+    "Amazon Web Services",
+    "Microsoft Project",
+    "JIRA"
+  ],
+  "experience": [
+    {
+      "company": "Outstaffer.com",
+      "position": "Chief Product Officer",
+      "start_date": "March 2024",
+      "end_date": "Present",
+      "location": "Australia",
+      "key_focus": [
+        "Product Strategy",
+        "Team Leadership",
+        "UX & Delivery Alignment",
+        "SaaS Development",
+        "Compliance Automation"
+      ],
+      "achievements": [
+        "Restructured the roadmap and delivery priorities of a formative-stage product to focus on quality and user experience, hence creating a market-ready platform.",
+        "Managed the balance between user simplicity and the complexity of global employment compliance.",
+        "Scaled the product and engineering team from 2 to 8, facilitating the growth of the product.",
+        "Established a lightweight product discovery process, ensuring alignment between customer problems, UX design, and tech execution.",
+        "Promoted a culture of clarity and iteration, helping to tighten the loop between user feedback and roadmap planning."
+      ],
+      "technologies": ["SaaS Platform", "Global Employment Compliance", "Product Discovery", "Agile Methodologies"]
+    },
+    {
+      "company": "Certane",
+      "position": "General Manager Technology",
+      "start_date": "August 2022",
+      "end_date": "June 2024",
+      "location": "Australia",
+      "key_focus": [
+        "Compliance",
+        "Staff Management",
+        "Vendor Management"
+      ],
+      "achievements": [
+        "Held overall accountability for the company's strategic direction, systems and infrastructure.",
+        "Successfully transitioned to an outsourced model for Information Security, Information Systems support and the in-house developed Payments system."
+      ],
+      "technologies": ["Information Security", "Information Systems", "Payments Systems"]
+    },
+    {
+      "company": "Certane",
+      "position": "Program Delivery Manager",
+      "start_date": "December 2019",
+      "end_date": "August 2022",
+      "location": "Australia",
+      "key_focus": [
+        "Strategic Alignment",
+        "Program Management",
+        "Solution Definition & Design",
+        "Google Cloud Platform",
+        "Amazon Web Services"
+      ],
+      "achievements": [
+        "Managed platforms that form the core operating system for the business with industry-first collaboration and corporate trust, administering $4B of payment instructions.",
+        "Successfully transitioned team of 12 engineers from external resources to internal employees, bolstering in-house capabilities.",
+        "Maintained an active role in testing, solution design, and release management."
+      ],
+      "technologies": ["Google Cloud Platform", "Amazon Web Services", "SaaS Solutions", "Release Management"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Network Computing",
+      "institution": "Monash University",
+      "notes": "Golden Key Invitee"
+    },
+    {
+      "degree": "Advanced Diploma of Computer Science",
+      "institution": "RMIT University"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Networking Associate",
+      "issuer": "Cisco Australasian Networking Academy"
+    },{
+      "name": "PRINCE 2 Foundation",
+      "issuer": "PRINCE2"
+    }
+  ],
+  "professional_affiliations": [
+    {
+      "organization": "Australian Institute of Project Management",
+      "membership_level": "Associate Member"
+    }
+  ],
+  "key_achievements_summary": [
+    "Led a team that scaled a B2B SaaS product from MVP to market-ready stage, delivering a globally compliant, quality, user-friendly platform.",
+    "Successfully managed the transition of a team of 12 engineers from external resources to in-house employees.",
+    "Championed the implementation of a product discovery process that tightly lined up with user feedback, UX design, and tech execution.",
+    "Controlled strategic alignment, program management and solution design for a suite of in-house platforms in Certane, managing $4B+ of payment instructions."
+  ]
+}

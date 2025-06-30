@@ -1,0 +1,7 @@
+Company: Title:**
+Role: **Job
+Generated: 2025-06-30T2149
+Files:
+- job_description.txt
+- tailored_resume.txt  
+- cover_letter.txt

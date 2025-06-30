@@ -1,0 +1,138 @@
+Based on the job description, the most relevant skills and experiences have been highlighted. Please see the tailored resume below:
+
+RESUME: {
+  "personal_info": {
+    "name": "Steven Waters",
+    "title": "Outcomes focused leader / Senior B2B SaaS Product Manager",
+    "email": "steve.g.waters@gmail.com",
+    "phone": "0403 880 495",
+    "linkedin": "http://au.linkedin.com/in/StevenGWaters",
+    "location": "Australia"
+  },
+  "summary": "Accomplished leader with over two decades of experience in delivering high-value outcomes including successful execution of SaaS platforms, strategic product management, and team scale-ups. Skilled at balancing user simplicity with the complexity of global compliance requirements, maintaining growth trajectory while ensuring legal accuracy. Proficient in fast feature deployment through collaboration with engineering and design teams, fostering adoption, and driving iterative enhancements based on customer insights and product analytics.",
+  "core_skills": [
+    "Product Management",
+    "Overseeing B2B SaaS platforms",
+    "Team Leadership",
+    "Strategic Alignment",
+    "Scalability",
+    "Global Compliance Requirement",
+    "Iterative Product Enhancement",
+    "Training Delivery"
+  ],
+  "technical_skills": [
+    "SaaS Development",
+    "Cloud Technologies",
+    "Business Intelligence",
+    "Data Forensics",
+    "Requirements Analysis",
+    "Microsoft Project",
+    "JIRA",
+    "Primavera P6",
+    "Amazon Web Services",
+    "Google Cloud Platform",
+    "Java",
+    "Angular"
+  ],
+  "experience": [
+    {
+      "company": "Outstaffer.com",
+      "position": "Chief Product Officer",
+      "start_date": "March 2024",
+      "end_date": "Present",
+      "location": "Australia",
+      "key_focus": [
+        "Product Strategy",
+        "Team Leadership",
+        "SaaS Development",
+        "Global Employment Compliance"
+      ],
+      "achievements": [
+        "Delivered a market-ready platform through a clear outcomes-first approach, balancing user simplicity with the complexity of global employment compliance",
+        "Scaled the product and engineering team from 2 to 8, embedding agile rituals to support cadence and autonomy",
+        "Introduced a lightweight product discovery process, creating alignment between customer problems, UX design, and engineering execution",
+        "Championed a culture of clarity and iteration, leveraging user feedback to accelerate product-market fit"
+      ],
+      "technologies": ["SaaS Platform", "Global Employment Compliance", "Product Discovery", "Agile Methodologies"]
+    },
+    {
+      "company": "Certane",
+      "position": "Program Delivery Manager",
+      "start_date": "December 2019",
+      "end_date": "August 2022",
+      "location": "Australia",
+      "key_focus": [
+        "Strategic Alignment",
+        "Program Management",
+        "Solution Definition & Design",
+        "Google Cloud Platform",
+        "Amazon Web Services"
+      ],
+      "achievements": [
+        "Responsible for delivering technology works for Certane Group suite of in-house SaaS solutions on AWS and GCP",
+        "Managed platforms that form the core system for the Trustee business, processing $4B+ payment instructions to date",
+        "Worked with stakeholder from C-Suite down, ensuring right problems were solved with right solutions by multiple teams"
+      ],
+      "technologies": ["Google Cloud Platform", "Amazon Web Services", "SaaS Solutions"]
+    },
+    {
+      "company": "GrowthOps",
+      "position": "Program Delivery Manager / Senior Account Manager",
+      "start_date": "October 2017",
+      "end_date": "December 2019",
+      "location": "Australia",
+      "key_focus": [
+        "Account Management",
+        "Business Case Creation",
+        "SaaS Solution Development",
+        "Strategic Alignment",
+        "Program Management",
+        "Google Cloud Platform",
+        "Amazon Web Services"
+      ],
+      "achievements": [
+        "Program management of development and productionisation of multiple complex SaaS business solutions ($2m+ budget each)",
+        "Delivered solutions that now serve as core business systems for Certane and their clients, all delivered in parallel within agreed timeframes and budget"
+      ],
+      "technologies": ["Google Cloud Platform", "Amazon Web Services", "SaaS Solutions"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Network Computing",
+      "institution": "Monash University",
+      "notes": "Golden Key Invitee"
+    },
+    {
+      "degree": "Advanced Diploma of Computer Science",
+      "institution": "RMIT University"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Networking Associate",
+      "issuer": "Cisco Australasian Networking Academy"
+    },
+    {
+      "name": "PRINCE 2 Foundation",
+      "issuer": "PRINCE2"
+    }
+  ],
+  "professional_affiliations": [
+    {
+      "organization": "Australian Institute of Project Management",
+      "membership_level": "Associate Member"
+    }
+  ],
+  "industries_served": [
+    "Finance and Banking: National Australia Bank, Commercial Bank of Africa, Sargon, Certane",
+    "Non-Government: Utilities, Energex, APA Group, Pacific Aluminium, Uniting Care",
+    "Government: Australian Tax Office, Country Energy, Kenya Revenue Authority"
+  ],
+  "key_achievements_summary": [
+    "Successful transition to a market-ready SaaS platform, balancing user simplicity with global compliance complexity",
+    "Scaled product and engineering teams from 2 to 8",
+    "Managed platforms processing $4B+ payment instructions",
+    "Delivered multiple $2m+ SaaS solutions on time and within budget"
+  ]
+}
