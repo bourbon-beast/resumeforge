@@ -1,16 +1,45 @@
-# Job Tailor Bot
+# JobTailor - Resume & Cover Letter Automation
 
-This is a local AI tool that tailors your resume and cover letter for specific job applications.
+Local-first AI-powered tool that tailors resumes and cover letters for job applications.
+
+## Quick Start
+
+1. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Set up environment:**
+   - Copy `.env.template` to `.env`
+   - Add your `GEMINI_API_KEY` to `.env`
+
+3. **Run:**
+   ```python
+   from main import JobTailor
+   
+   tailor = JobTailor()
+   output_path = tailor.process_job_application(job_description_text)
+   ```
 
 ## Features
 
-- Input: Resume in structured JSON format
-- Input: Job description (text or URL)
-- Output: Tailored resume and cover letter
-- Organized folders per application
+- **Gemini AI extraction** - Parses job descriptions into structured data
+- **Smart folder naming** - `Company_Role_YYYY-MM-DDTHHMM` format
+- **Complete outputs** - Tailored resume, cover letter, job analysis, metadata
+- **Modular design** - Easy to extend with different AI models
 
-## To Run
+## Output Structure
 
-1. Edit `resume_template.json` with your details.
-2. Place the job description text in `robot_brain/input/job.txt`.
-3. Run `python robot_brain/main.py` to generate the tailored resume and cover letter.
+Each run creates a timestamped folder containing:
+- `job_description.txt` - Original job posting
+- `job_analysis.json` - Extracted company, role, skills data
+- `tailored_resume.json` - Customized resume
+- `cover_letter.txt` - Generated cover letter
+- `metadata.json` - Run information and success metrics
+
+## Next Steps
+
+- Implement actual AI model integration for resume tailoring
+- Add CLI interface
+- Support URL job description fetching
+- Add more AI model providers

@@ -1,29 +1,237 @@
 {
-  "name": "Jane Doe",
-  "title": "Software Engineer",
-  "contact": {
-    "email": "jane@example.com",
-    "phone": "123-456-7890"
+  "personal_info": {
+    "name": "Steven Waters",
+    "title": "Outcomes focused leader",
+    "email": "steve.g.waters@gmail.com",
+    "phone": "0403 880 495",
+    "linkedin": "http://au.linkedin.com/in/StevenGWaters",
+    "location": "Australia"
   },
+  "summary": "Calm under pressure, leaving ego behind enables me to ask the \"small\" and \"simple\" questions that ensure each project goes well with no assumptions. That coupled with trusting my intuition (probably just experience but does not sound as cool) around possible risks and issues that may arise has seen me more often than not deliver to expectations (or beyond) by making clear informed decisions to deliver the best outcomes for my clients and my business. I have accumulated over 2 decades experience running projects, client accounts and building delivery teams across a variety of industries, this experience has also enabled the taking on internal facing roles to drive operations of a business as well as project management for the delivery of high value outcomes.",
+  "core_skills": [
+    "Project Management",
+    "Program Management", 
+    "Pre-sales",
+    "Solution Consulting",
+    "Account Management",
+    "Solution Design",
+    "Stakeholder Management",
+    "SaaS Development",
+    "Cloud Technologies",
+    "Business Intelligence",
+    "Data Forensics",
+    "Requirements Analysis",
+    "Training Delivery"
+  ],
+  "technical_skills": [
+    "Primavera P6",
+    "Microsoft Project", 
+    "JIRA",
+    "Google Cloud Platform",
+    "Amazon Web Services",
+    "Firestore",
+    "BigQuery",
+    "Oracle Database",
+    "Java",
+    "Angular"
+  ],
   "experience": [
     {
-      "company": "TechCorp",
-      "role": "Backend Developer",
-      "duration": "2019 - Present",
-      "description": "Developed scalable APIs and database systems."
+      "company": "Outstaffer.com",
+      "position": "Chief Product Officer",
+      "start_date": "March 2024",
+      "end_date": "Present",
+      "location": "Australia",
+      "key_focus": [
+        "Product Strategy",
+        "Team Leadership", 
+        "UX & Delivery Alignment",
+        "SaaS Development",
+        "Compliance Automation",
+        "Global Hiring Platforms"
+      ],
+      "achievements": [
+        "Joined at a formative stage to lead a product that was not yet release-ready; restructured the roadmap and delivery priorities to focus on quality and user experience",
+        "Delivered a market-ready platform through a clear outcomes-first approach, balancing user simplicity with the complexity of global employment compliance",
+        "Scaled the product and engineering team from 2 to 8, including hiring a junior product manager and embedding agile rituals to support cadence and autonomy",
+        "Introduced a lightweight product discovery process, creating alignment between customer problems, UX design, and engineering execution",
+        "Championed a culture of clarity and iteration, tightening the loop between user feedback and roadmap planning to accelerate product-market fit"
+      ],
+      "technologies": ["SaaS Platform", "Global Employment Compliance", "Product Discovery", "Agile Methodologies"]
     },
     {
-      "company": "DevSolutions",
-      "role": "Junior Developer",
-      "duration": "2017 - 2019",
-      "description": "Worked on frontend components and bug fixes."
+      "company": "Certane",
+      "position": "General Manager Technology",
+      "start_date": "August 2022",
+      "end_date": "June 2024",
+      "location": "Australia",
+      "key_focus": [
+        "Compliance",
+        "Security",
+        "Policy Framework",
+        "Staff Management",
+        "Vendor Management"
+      ],
+      "achievements": [
+        "General manager of Technology/IT with overall accountability for Certane Group's policies, strategic direction, systems and infrastructure",
+        "Working closely with the C-Suite, negotiated and managed a transition to an outsourced model for Information Security, Information Systems support and the in-house developed Payments system",
+        "Enabled the group for its next chapter of growth through strategic technology transitions"
+      ],
+      "technologies": ["Information Security", "Information Systems", "Payments Systems"]
+    },
+    {
+      "company": "Certane", 
+      "position": "Program Delivery Manager",
+      "start_date": "December 2019",
+      "end_date": "August 2022",
+      "location": "Australia",
+      "key_focus": [
+        "Strategic Alignment",
+        "Stakeholder Management", 
+        "Program Management",
+        "Solution Definition & Design",
+        "Release Management",
+        "Google Cloud Platform",
+        "Amazon Web Services"
+      ],
+      "achievements": [
+        "Responsible for effective prioritisation and delivery of technology works for Certane Group suite of in-house SaaS solutions on AWS and Google Cloud platforms",
+        "Managed platforms that form the core operating system for the Trustee business with industry-first collaboration and Corporate trust with $4B of payment instructions processed to date",
+        "Successfully managed transition of 12 engineers from external resource providers to internal employees",
+        "Worked with business stakeholders from C-Suite down to ensure right problems were solved with right solutions by multiple teams",
+        "Maintained hands-on component including testing, solution design and release management"
+      ],
+      "technologies": ["Google Cloud Platform", "Amazon Web Services", "SaaS Solutions", "Release Management"]
+    },
+    {
+      "company": "GrowthOps",
+      "position": "Program Delivery Manager / Senior Account Manager", 
+      "start_date": "October 2017",
+      "end_date": "December 2019",
+      "location": "Australia",
+      "key_focus": [
+        "Account Management",
+        "SaaS Solution Development",
+        "Business Case Creation",
+        "Line Item Accountability",
+        "Strategic Alignment",
+        "Stakeholder Management",
+        "Program Management",
+        "Solution Definition & Design",
+        "Google Cloud Platform",
+        "Amazon Web Services"
+      ],
+      "achievements": [
+        "Multidisciplinary role with Account & Program Director responsibilities across $1m+ quarterly revenue account",
+        "Within highly regulated Financial Services environment, collaborated with client stakeholders at all levels to create alignment of technology services to strategic outcomes",
+        "Had accountability for growth, revenue, margin & team management within client space",
+        "Successfully program/project managed development and productionisation of multiple complex SaaS business solutions ($2m+ budget each)",
+        "Delivered solutions that now serve as core business systems for Certane and their clients, all delivered in parallel within agreed timeframes and at margin"
+      ],
+      "technologies": ["Google Cloud Platform", "Amazon Web Services", "SaaS Solutions", "Financial Services"]
+    },
+    {
+      "company": "3wks",
+      "position": "Program Delivery Manager",
+      "start_date": "October 2015", 
+      "end_date": "October 2017",
+      "location": "Australia",
+      "key_focus": [
+        "Account Management",
+        "Strategic Alignment",
+        "Stakeholder Management", 
+        "Solution Definition & Design",
+        "Google Cloud Platform",
+        "Release Management",
+        "Feature Testing"
+      ],
+      "achievements": [
+        "Worked as part of high performance small teams following 3wks Beyond Agile methodology to deliver game-changing solutions to enterprise problems",
+        "Led team from multiple internal business areas and external stakeholders to develop solution for Monash University International Student Application",
+        "Transformed multimillion dollar revenue stream from wet signatures and manual data entry to online solution",
+        "Dramatically reduced manual processing while increasing satisfaction and transparency levels for applicants and education agents",
+        "Solution developed using 3wks Beyond Agile methodology on Google App Engine using Java and Angular"
+      ],
+      "technologies": ["Google App Engine", "Java", "Angular", "Beyond Agile Methodology"]
+    },
+    {
+      "company": "Acendre",
+      "position": "Delivery Manager Solutions",
+      "start_date": "Early 2015",
+      "end_date": "October 2015", 
+      "location": "Australia",
+      "key_focus": [
+        "Account Management",
+        "Team Management",
+        "P&L Accountability",
+        "Pre-sales Engagement",
+        "Requirement Workshop Facilitation",
+        "Project Management"
+      ],
+      "achievements": [
+        "Responsible for Acendre Solutions Team, overseeing streamlining of SaaS platform implementation methodology and client satisfaction",
+        "Managed talent delivery team, enabling team autonomy to drive engagement",
+        "Crafted delivery schedule for all contracted work with clear communication to sales, client management and expectation management",
+        "Internal focus and accountability for profitability of implementation services",
+        "Maintained external Solutions Consultant role encompassing end-to-end lifecycle from pre-sales to BAU transition"
+      ],
+      "technologies": ["SaaS Platform", "Human Resources Systems"]
+    },
+    {
+      "company": "Acendre",
+      "position": "Senior Solutions Consultant",
+      "start_date": "2012",
+      "end_date": "2015",
+      "location": "Australia", 
+      "key_focus": [
+        "Project Management",
+        "Pre-sales Demonstrations",
+        "Collaboration on Sales Pitches",
+        "Requirements Elicitation",
+        "Requirements Documentation", 
+        "Training Delivery"
+      ],
+      "achievements": [
+        "Responsibility for multiple parallel end-to-end implementations of Acendre's SaaS Human Resources platform",
+        "Multi-faceted role spanning from pre-sales including design and delivery of demonstrations through to solution delivery lifecycle",
+        "Managed requirements gathering to go-live of final solutions",
+        "Delivered training and collaborated on sales pitches"
+      ],
+      "technologies": ["SaaS Platform", "Human Resources Systems"]
     }
   ],
-  "skills": [
-    "Python",
-    "Django",
-    "REST APIs",
-    "PostgreSQL",
-    "Docker"
+  "education": [
+    {
+      "degree": "Bachelor of Network Computing",
+      "institution": "Monash University",
+      "notes": "Golden Key Invitee"
+    },
+    {
+      "degree": "Advanced Diploma of Computer Science", 
+      "institution": "RMIT University"
+    },
+    {
+      "degree": "High School Studies",
+      "institution": "Haileybury College"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Networking Associate",
+      "issuer": "Cisco Australasian Networking Academy"
+    },
+    {
+      "name": "PRINCE 2 Foundation",
+      "issuer": "PRINCE2"
+    },
+    {
+      "name": "Project Management with Primavera P6", 
+      "issuer": "Primavera Australia",
+      "year": "2009"
+    },
+    {
+      "name": "Electrician",
+      "issuer": "Trade Certification"
+    }
   ]
 }
