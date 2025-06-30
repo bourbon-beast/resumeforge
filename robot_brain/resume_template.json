@@ -1,0 +1,29 @@
+{
+  "name": "Jane Doe",
+  "title": "Software Engineer",
+  "contact": {
+    "email": "jane@example.com",
+    "phone": "123-456-7890"
+  },
+  "experience": [
+    {
+      "company": "TechCorp",
+      "role": "Backend Developer",
+      "duration": "2019 - Present",
+      "description": "Developed scalable APIs and database systems."
+    },
+    {
+      "company": "DevSolutions",
+      "role": "Junior Developer",
+      "duration": "2017 - 2019",
+      "description": "Worked on frontend components and bug fixes."
+    }
+  ],
+  "skills": [
+    "Python",
+    "Django",
+    "REST APIs",
+    "PostgreSQL",
+    "Docker"
+  ]
+}
