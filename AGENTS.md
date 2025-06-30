@@ -8,13 +8,13 @@ This project is a React + Python application. Backend logic is in `robot_brain/`
 
 ### 🔧 Setup Instructions
 
-Before beginning any task, run the setup script:
+Before beginning any task, **run the setup script every time you open a new terminal session or pull new changes**:
 
 ```bash
 ./setup.sh
 ```
 
-If the script doesn't exist yet, ensure the following:
+This script takes care of creating or re-activating the Python virtual environment, installing dependencies, and configuring formatters. If the script doesn't exist yet, ensure the following steps are performed manually:
 
 1. **Python Virtual Environment**
 
@@ -23,6 +23,9 @@ If the script doesn't exist yet, ensure the following:
    source venv/bin/activate
    pip install -r robot_brain/requirements.txt
    ```
+
+   Remember to re-run `source venv/bin/activate` at the start of each new shell
+   session so the virtual environment is active.
 
 2. **Node Dependencies**
 
