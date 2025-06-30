@@ -10,7 +10,7 @@
   "summary": "Calm under pressure, leaving ego behind enables me to ask the \"small\" and \"simple\" questions that ensure each project goes well with no assumptions. That coupled with trusting my intuition (probably just experience but does not sound as cool) around possible risks and issues that may arise has seen me more often than not deliver to expectations (or beyond) by making clear informed decisions to deliver the best outcomes for my clients and my business. I have accumulated over 2 decades experience running projects, client accounts and building delivery teams across a variety of industries, this experience has also enabled the taking on internal facing roles to drive operations of a business as well as project management for the delivery of high value outcomes.",
   "core_skills": [
     "Project Management",
-    "Program Management", 
+    "Program Management",
     "Pre-sales",
     "Solution Consulting",
     "Account Management",
@@ -21,11 +21,14 @@
     "Business Intelligence",
     "Data Forensics",
     "Requirements Analysis",
-    "Training Delivery"
+    "Training Delivery",
+    "AI Strategy & Implementation",
+    "Prompt Engineering",
+    "AI Workflow Orchestration"
   ],
   "technical_skills": [
     "Primavera P6",
-    "Microsoft Project", 
+    "Microsoft Project",
     "JIRA",
     "Google Cloud Platform",
     "Amazon Web Services",
@@ -33,7 +36,106 @@
     "BigQuery",
     "Oracle Database",
     "Java",
-    "Angular"
+    "Angular",
+    "OpenAI API",
+    "Claude API",
+    "Google Vertex AI",
+    "Retrieval-Augmented Generation (RAG)",
+    "Natural Language Processing",
+    "n8n Automation"
+  ],
+  "ai_automation_projects": [
+    {
+      "section_title": "AI & Intelligent Automation Leadership (2024–2025)",
+      "overview": "Led development of production AI systems from strategy through implementation, focusing on practical automation that delivers measurable business outcomes.",
+      "projects": [
+        {
+          "project": "JobTailor - AI Resume Optimization Platform",
+          "role": "Technical Lead / System Architect",
+          "key_focus": [
+            "AI System Architecture",
+            "Prompt Engineering Strategy",
+            "Multi-Model Integration",
+            "Local-First AI Tools"
+          ],
+          "achievements": [
+            "Architected modular AI platform supporting OpenAI, Claude, and local models with swappable interfaces",
+            "Designed prompt template system enabling consistent AI outputs across resume and cover letter generation",
+            "Built structured JSON resume parsing with intelligent content matching and rewriting workflows",
+            "Created automated tracking and organization system for AI-generated job application materials"
+          ],
+          "technologies": ["OpenAI API", "Claude API", "Python", "JSON Schema", "Git-based Versioning"]
+        },
+        {
+          "project": "AI-Driven HR Compliance Assistant",
+          "role": "Product Owner / AI Strategy Lead",
+          "key_focus": [
+            "Retrieval-Augmented Generation (RAG)",
+            "Country-Specific AI Models",
+            "Compliance Automation",
+            "Dynamic Prompt Systems"
+          ],
+          "achievements": [
+            "Designed AI assistant architecture using Google Cloud Vertex AI for automated HR policy Q&A",
+            "Built country-specific compliance modules starting with Philippines labor law automation",
+            "Engineered dynamic prompt rewriting system adapting responses based on query context and compliance requirements",
+            "Integrated RAG workflows ensuring accurate, up-to-date compliance information delivery"
+          ],
+          "technologies": ["Google Cloud Vertex AI", "Cloud Functions", "Firestore", "RAG Architecture"]
+        },
+        {
+          "project": "Email Intelligence & Calendar Automation",
+          "role": "Technical Lead / AI Workflow Designer",
+          "key_focus": [
+            "Natural Language Processing",
+            "Email Intelligence",
+            "Workflow Automation",
+            "Human-in-the-Loop AI"
+          ],
+          "achievements": [
+            "Built AI-powered email parsing system converting unstructured communications into structured calendar events",
+            "Designed tone analysis and email rewriting tools with prompt optimization infrastructure",
+            "Implemented scheduled batch processing with intelligent title generation and confidence scoring",
+            "Created human-in-the-loop approval workflows balancing automation efficiency with accuracy requirements"
+          ],
+          "technologies": ["n8n Automation", "LLM APIs", "Google Calendar API", "NLP Processing"]
+        },
+        {
+          "project": "AI Operations & Prompt Engineering Infrastructure",
+          "role": "AI Strategy Lead / Technical Architect",
+          "key_focus": [
+            "Prompt Engineering at Scale",
+            "AI Model Operations",
+            "Performance Optimization",
+            "Security Architecture"
+          ],
+          "achievements": [
+            "Established prompt tuning infrastructure with A/B testing, versioning, and performance analytics",
+            "Built Git-based traceability systems for prompt optimization and model response improvement tracking",
+            "Designed secure multi-tenant AI service architectures with flexible vendor switching capabilities",
+            "Created monitoring frameworks for AI feature usage, cost optimization, and quality assurance",
+            "Implemented Claude-in-Claude orchestration for automated prompt improvement workflows"
+          ],
+          "technologies": ["Claude API", "OpenAI API", "Git", "Analytics Frameworks", "Multi-Tenant Architecture"]
+        }
+      ],
+      "core_ai_competencies": [
+        "AI System Architecture & Integration",
+        "Prompt Engineering & Optimization",
+        "Retrieval-Augmented Generation (RAG)",
+        "Multi-Model AI Strategy",
+        "Human-in-the-Loop Automation",
+        "AI Performance Monitoring & Analytics",
+        "Secure AI Service Design",
+        "Production AI Workflow Orchestration"
+      ],
+      "strategic_ai_leadership": [
+        "Guided AI implementations from business problem identification through production deployment",
+        "Balanced automation efficiency with human oversight requirements for mission-critical workflows",
+        "Designed AI systems prioritizing practical outcomes over technological complexity",
+        "Established prompt engineering best practices enabling consistent, measurable AI performance improvements"
+      ]
+    }
   ],
   "experience": [
     {
@@ -44,7 +146,7 @@
       "location": "Australia",
       "key_focus": [
         "Product Strategy",
-        "Team Leadership", 
+        "Team Leadership",
         "UX & Delivery Alignment",
         "SaaS Development",
         "Compliance Automation",
@@ -80,14 +182,14 @@
       "technologies": ["Information Security", "Information Systems", "Payments Systems"]
     },
     {
-      "company": "Certane", 
+      "company": "Certane",
       "position": "Program Delivery Manager",
       "start_date": "December 2019",
       "end_date": "August 2022",
       "location": "Australia",
       "key_focus": [
         "Strategic Alignment",
-        "Stakeholder Management", 
+        "Stakeholder Management",
         "Program Management",
         "Solution Definition & Design",
         "Release Management",
@@ -105,7 +207,7 @@
     },
     {
       "company": "GrowthOps",
-      "position": "Program Delivery Manager / Senior Account Manager", 
+      "position": "Program Delivery Manager / Senior Account Manager",
       "start_date": "October 2017",
       "end_date": "December 2019",
       "location": "Australia",
@@ -133,13 +235,13 @@
     {
       "company": "3wks",
       "position": "Program Delivery Manager",
-      "start_date": "October 2015", 
+      "start_date": "October 2015",
       "end_date": "October 2017",
       "location": "Australia",
       "key_focus": [
         "Account Management",
         "Strategic Alignment",
-        "Stakeholder Management", 
+        "Stakeholder Management",
         "Solution Definition & Design",
         "Google Cloud Platform",
         "Release Management",
@@ -158,7 +260,7 @@
       "company": "Acendre",
       "position": "Delivery Manager Solutions",
       "start_date": "Early 2015",
-      "end_date": "October 2015", 
+      "end_date": "October 2015",
       "location": "Australia",
       "key_focus": [
         "Account Management",
@@ -182,13 +284,13 @@
       "position": "Senior Solutions Consultant",
       "start_date": "2012",
       "end_date": "2015",
-      "location": "Australia", 
+      "location": "Australia",
       "key_focus": [
         "Project Management",
         "Pre-sales Demonstrations",
         "Collaboration on Sales Pitches",
         "Requirements Elicitation",
-        "Requirements Documentation", 
+        "Requirements Documentation",
         "Training Delivery"
       ],
       "achievements": [
@@ -198,6 +300,133 @@
         "Delivered training and collaborated on sales pitches"
       ],
       "technologies": ["SaaS Platform", "Human Resources Systems"]
+    },
+    {
+      "company": "Country Energy / Essential Energy",
+      "position": "Primavera Administrator / Project Scheduler",
+      "start_date": "2009",
+      "end_date": "2012",
+      "location": "Australia",
+      "key_focus": [
+        "Project Scheduling",
+        "Training Delivery",
+        "Process Design",
+        "Primavera P6 Administration"
+      ],
+      "achievements": [
+        "Engaged to provide scheduling and administration services to Portfolio Services offices",
+        "Designed and implemented new project resourcing and scheduling processes utilising Primavera P6.2",
+        "Delivered training to over 70 project managers and resource owners in new resourcing processes and best practice scheduling",
+        "Assisted in design and documentation of best practice processes for project and resource management",
+        "Developed various reports using Primavera report writer",
+        "Managed sub-project that restored accuracy and faith in interface between Primavera and PeopleSoft"
+      ],
+      "technologies": ["Primavera P6", "PeopleSoft", "Project Scheduling"]
+    },
+    {
+      "company": "Victorian Cytology Service",
+      "position": "Junior Project Manager",
+      "start_date": "2008",
+      "end_date": "2008",
+      "location": "Australia",
+      "key_focus": [
+        "Project Management",
+        "UAT Management",
+        "Risk Management",
+        "Business Continuity Planning"
+      ],
+      "achievements": [
+        "Responsible for delivery of interim National HPV Vaccination Program Register solution",
+        "Delivered on time, budget and meeting requirements under tight timelines",
+        "Controlled risk register and issues log, prepared change request documentation",
+        "Client side UAT test manager controlling over 100 test scripts and test team of eight",
+        "Played critical role in development and delivery of business risk analysis and business continuity planning",
+        "Delivered comprehensive organisational risk register and business continuity plan"
+      ],
+      "technologies": ["UAT Testing", "Risk Management", "Business Continuity"]
+    },
+    {
+      "company": "National Australia Bank",
+      "position": "Data Analyst",
+      "start_date": "2008",
+      "end_date": "2008",
+      "location": "Australia",
+      "key_focus": [
+        "Data Analysis",
+        "OLAP Technologies",
+        "Risk Weighted Asset Reporting"
+      ],
+      "achievements": [
+        "Reviewed NAB Securities Database to ensure data exists for Risk Weighted Asset (RWA) reporting to APRA",
+        "Created data collection and analysis processes for all methods of loan updating",
+        "Developed and updated resource modelling tools",
+        "Used OLAP technologies to process raw data and present to management in required formats",
+        "Facilitated third party contract monitoring, operational throughput and project progress monitoring"
+      ],
+      "technologies": ["OLAP", "Excel", "PowerPoint", "Securities Database", "Siebel"]
+    },
+    {
+      "company": "Gateway Broadcasting Services",
+      "position": "East African Operations Manager",
+      "start_date": "2006",
+      "end_date": "2007",
+      "location": "Kenya/UK",
+      "key_focus": [
+        "Operations Management",
+        "Customer Management Systems",
+        "Network Implementation",
+        "Financial Analysis"
+      ],
+      "achievements": [
+        "Part of foundation team for GTV, pan-African pay-TV satellite service from inception to operation",
+        "Involved in service offering and fulfilment process design and provision of East African Operations",
+        "Implemented logistics and project processes, delivering products from manufacturer to retail agents",
+        "Completed selection, analysis and implementation of customer management system with full financial analysis",
+        "Part of design team and oversaw roll out of African WAN and communications network",
+        "Within first three months, GTV acquired over 10,000 subscribers and became fastest growing service in Africa, rolled out in 8 countries"
+      ],
+      "technologies": ["Customer Management Systems", "WAN Networks", "Satellite Broadcasting"]
+    },
+    {
+      "company": "Postel Directories",
+      "position": "Project Leader",
+      "start_date": "2006",
+      "end_date": "2006",
+      "location": "Kenya",
+      "key_focus": [
+        "Business Continuity Planning",
+        "Disaster Recovery",
+        "Stakeholder Consultation"
+      ],
+      "achievements": [
+        "Developed and tested complete Business Continuity and Disaster Recovery Plan (BCDRP)",
+        "Extensive consultation with key stakeholders to establish business requirements",
+        "Mapped and prioritised all company business processes",
+        "Documented complete plan and validated through extensive desktop and scenario based testing"
+      ],
+      "technologies": ["Business Continuity", "Disaster Recovery Planning"]
+    },
+    {
+      "company": "Kenya Revenue Authority",
+      "position": "Project Lead",
+      "start_date": "2005",
+      "end_date": "2005",
+      "location": "Kenya",
+      "key_focus": [
+        "Tax System Monitoring",
+        "Process Investigation",
+        "Database Management",
+        "Fraud Prevention"
+      ],
+      "achievements": [
+        "Implemented covert monitoring and management reporting system for KRA Value Added Tax database",
+        "Addressed high level of process and software abuse leading to tax fraud and income loss",
+        "Mapped KRA VAT payment and collection business processes including in-house payment software and Oracle database",
+        "Responsible for integrity of investigation and protection of system information",
+        "Controlled procurement of required software and successful implementation of monitoring and reporting system",
+        "Aligned system with management information requirements of both investigators and senior management"
+      ],
+      "technologies": ["Oracle Database", "VAT Systems", "Monitoring Software"]
     }
   ],
   "education": [
@@ -207,7 +436,7 @@
       "notes": "Golden Key Invitee"
     },
     {
-      "degree": "Advanced Diploma of Computer Science", 
+      "degree": "Advanced Diploma of Computer Science",
       "institution": "RMIT University"
     },
     {
@@ -225,7 +454,7 @@
       "issuer": "PRINCE2"
     },
     {
-      "name": "Project Management with Primavera P6", 
+      "name": "Project Management with Primavera P6",
       "issuer": "Primavera Australia",
       "year": "2009"
     },
@@ -233,5 +462,31 @@
       "name": "Electrician",
       "issuer": "Trade Certification"
     }
+  ],
+  "professional_affiliations": [
+    {
+      "organization": "Australian Institute of Project Management",
+      "membership_level": "Associate Member"
+    }
+  ],
+  "industries_served": [
+    "Government: Australian Tax Office, Country Energy, Kenya Revenue Authority, Kenya Medical Supply Authority, Victoria Cytology Service",
+    "Non-Government: Utilities, Energex, APA Group, Pacific Aluminium, Uniting Care",
+    "Media: GTV, Postel Directories, Nation Media Group",
+    "Finance and Banking: National Australia Bank, Commercial Bank of Africa, Sargon, Certane",
+    "Telecom: SafariCom"
+  ],
+  "key_achievements_summary": [
+    "Over 2 decades experience running projects, client accounts and building delivery teams",
+    "Scaled product and engineering teams from 2 to 8 people",
+    "Delivered market-ready platform balancing user simplicity with global employment compliance complexity",
+    "Managed $4B+ of payment instructions through industry-first platforms",
+    "Successfully transitioned teams from external resources to internal employees",
+    "Delivered multiple $2m+ SaaS solutions on time and within budget",
+    "Led implementation of systems serving multimillion dollar revenue streams",
+    "Trained 70+ project managers in best practice scheduling",
+    "Founded and launched pan-African satellite TV service reaching 10,000+ subscribers in first 3 months",
+    "Architected and deployed production AI systems from strategy through implementation",
+    "Established prompt engineering best practices and AI performance optimization frameworks"
   ]
 }

@@ -36,6 +36,7 @@ class GeminiJobExtractor:
         }
         
         try:
+            print(f"🌐 Calling Gemini API...")
             response = requests.post(
                 f"{self.base_url}?key={self.api_key}",
                 headers={'Content-Type': 'application/json'},
@@ -45,10 +46,20 @@ class GeminiJobExtractor:
             response.raise_for_status()
             
             result = response.json()
+            print(f"📦 Raw API response: {result}")
             content = result['candidates'][0]['content']['parts'][0]['text']
+            print(f"📝 Extracted content: {content}")
+            
+            # Clean up markdown formatting if present
+            content = content.strip()
+            if content.startswith('```json'):
+                content = content[7:]  # Remove ```json
+            if content.endswith('```'):
+                content = content[:-3]  # Remove ```
+            content = content.strip()
             
             # Parse the JSON response
-            extracted_data = json.loads(content.strip())
+            extracted_data = json.loads(content)
             return extracted_data
             
         except requests.RequestException as e:

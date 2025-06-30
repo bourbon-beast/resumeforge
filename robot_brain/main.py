@@ -60,12 +60,15 @@ class JobTailor:
         """
         Analyze job description to extract key requirements and details using Gemini API
         """
+        print("🔍 Calling Gemini API for job extraction...")
         try:
             from gemini_extractor import GeminiJobExtractor
             extractor = GeminiJobExtractor()
-            return extractor.extract_job_details(job_description)
+            result = extractor.extract_job_details(job_description)
+            print(f"✅ Gemini extraction result: {result}")
+            return result
         except Exception as e:
-            print(f"Warning: Job extraction failed, using fallback: {e}")
+            print(f"❌ Job extraction failed: {e}")
             # Fallback to basic structure
             return {
                 "company_name": "Unknown Company",
@@ -106,8 +109,12 @@ class JobTailor:
     def _sanitize_filename(self, filename: str) -> str:
         """Remove invalid characters from filename"""
         import re
+        # Handle None or empty strings
+        if not filename:
+            return "Unknown"
+        
         # Replace invalid chars with underscore
-        sanitized = re.sub(r'[<>:"/\\|?*]', '_', filename)
+        sanitized = re.sub(r'[<>:"/\\|?*]', '_', str(filename))
         # Replace spaces with underscores
         sanitized = sanitized.replace(' ', '_')
         # Remove multiple underscores
@@ -211,15 +218,20 @@ Best regards,
 
 
 if __name__ == "__main__":
-    # Example usage
-    job_desc = """
-    Senior Product Manager - Sydney
-    TechCorp Australia
-    
-    We're seeking a Senior Product Manager to lead our SaaS platform development.
-    Experience with cloud technologies and agile methodologies required.
-    """
-    
-    tailor = JobTailor()
-    output_path = tailor.process_job_application(job_desc, model_provider='openai')
-    print(f"Results saved to: {output_path}")
+    # Read job description from job.txt
+    try:
+        with open('job.txt', 'r', encoding='utf-8') as f:
+            job_desc = f.read().strip()
+        
+        if not job_desc:
+            print("❌ job.txt is empty. Please add a job description.")
+            exit(1)
+            
+        print("📋 Processing job from job.txt...")
+        tailor = JobTailor()
+        output_path = tailor.process_job_application(job_desc, model_provider='openai')
+        print(f"✅ Results saved to: {output_path}")
+        
+    except FileNotFoundError:
+        print("❌ job.txt not found. Please create it with a job description.")
+        exit(1)
