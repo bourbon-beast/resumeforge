@@ -9,6 +9,8 @@ from pathlib import Path
 from datetime import datetime
 from gemini_extractor import GeminiExtractor
 
+print(f"Debug: GEMINI_API_KEY = {os.getenv('GEMINI_API_KEY')}")
+
 def load_job_description():
     """Load job description from input file"""
     job_file = Path("input/job.txt")
