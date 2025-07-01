@@ -1,0 +1,79 @@
+{
+  "brand_statement": {
+    "name": "Steve Waters",
+    "title": "Outstaffer CEO & Technology Leader",
+    "email": "steve.waters@outstaffer.com",
+    "core_statement": "I'm a solutions-focused leader who cuts through complexity to get things done. I communicate with direct authenticity — no corporate fluff, just clear thinking and practical action. Whether tackling technical challenges or building business strategy, I bring a collaborative, no-nonsense approach that values efficiency, transparency, and genuine connection.",
+    "core_traits": [
+      {
+        "trait": "Direct & Efficient",
+        "icon": "🎯",
+        "description": "I get straight to the point without unnecessary formalities. My emails are concise, action-oriented, and focused on solving problems quickly."
+      },
+      {
+        "trait": "Collaborative",
+        "icon": "🤝",
+        "description": "I actively seek input from others, use inclusive language like 'we' and 'our', and approach challenges as team efforts rather than solo endeavors."
+      },
+      {
+        "trait": "Pragmatic",
+        "icon": "💼",
+        "description": "I focus on practical solutions and real-world outcomes. I'm comfortable with technical details while keeping business objectives in sight."
+      },
+      {
+        "trait": "Action-Oriented",
+        "icon": "🏃‍♂️",
+        "description": "I don't just discuss — I propose next steps, suggest meetings, and push for concrete progress. I'm comfortable making decisions quickly."
+      },
+      {
+        "trait": "Approachable",
+        "icon": "😊",
+        "description": "My signature 'Cheers, Steve' and casual tone make me accessible while maintaining professionalism. I balance authority with warmth."
+      },
+      {
+        "trait": "Problem-Solver",
+        "icon": "🔧",
+        "description": "I naturally break down complex issues, ask clarifying questions, and offer multiple pathways forward. I'm comfortable navigating technical and business challenges."
+      },
+      {
+        "trait": "0-to-1 Product Builder",
+        "icon": "🚀",
+        "description": "I excel at taking ideas from conception to production-ready features. I thrive in the messy, formative stages where pragmatic decisions and clear execution matter more than perfect processes.",
+        "supporting_evidence": [
+          "Outstaffer: Joined at formative stage, restructured roadmap to deliver market-ready platform",
+          "GTV Kenya: Foundation team member, 0 to 10,000+ subscribers in 3 months across 8 countries",
+          "GrowthOps: Built multiple $2M+ SaaS solutions from scratch in parallel",
+          "3wks: Transformed multimillion dollar revenue stream from manual processes to online solution"
+        ]
+      }
+    ],
+    "communication_examples": [
+      {
+        "category": "Efficient Problem-Solving",
+        "example": "Steffany - thanks that would be great, I have technical questions about getting data into HubSpot in the most effective way...please send through an invite we can discuss our needs then work a plan forward from there..."
+      },
+      {
+        "category": "Clear Decision Making",
+        "example": "Folks - if this is inline with normal practice it makes sense to me and I am happy to approve..."
+      },
+      {
+        "category": "Technical Clarity",
+        "example": "I also have a bunch of stuff in Mixpanel and Looker that hits major of points just no financials...ideally we don't buy more tools we just tie up what we have with added financial data..."
+      },
+      {
+        "category": "Collaborative Approach",
+        "example": "Happy to have a call or whatever else might be needed for further clarity..."
+      }
+    ],
+    "personal_philosophy": "I believe in clear communication, practical solutions, and building genuine connections that drive real results.",
+    "signature_closing": "Cheers, Steve",
+    "communication_style": {
+      "tone": "direct and efficient",
+      "approach": "solutions-focused",
+      "language": "collaborative and inclusive",
+      "formality": "approachable professionalism",
+      "decision_making": "action-oriented",
+      "technical_comfort": "high - balances technical and business context"
+    }
+  }
+}

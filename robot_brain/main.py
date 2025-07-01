@@ -14,7 +14,7 @@ class JobTailor:
     
     def __init__(self, output_base_path: str = None):
         self.output_base_path = output_base_path or os.getenv('OUTPUT_BASE_PATH', './output')
-        self.resume_template_path = './resume_template.json'
+        self.resume_template_path = 'input/resume_template.json'
         
         # Ensure output directory exists
         os.makedirs(self.output_base_path, exist_ok=True)
