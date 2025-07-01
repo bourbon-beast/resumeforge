@@ -24,4 +24,6 @@ dist-ssr
 *.sw?
 venv/
 robot_brain/.env
-robot_brain/output
+robot_brain/output/
+robot_brain/venv/
+robot_brain/__pycache__/
