@@ -1,5 +1,5 @@
 import openai
-from models.model_interface import ResumeTailorModel
+from model_interface import ResumeTailorModel
 
 
 class OpenAIModel(ResumeTailorModel):
@@ -22,13 +22,11 @@ class OpenAIModel(ResumeTailorModel):
         return response.choices[0].message["content"]
 
     def generate_cover_letter(self, resume_json, job_description_text):
-        prompt = f"""
-        Write a compelling, personalized cover letter for this job application.
-        Use the resume and job description to highlight fit and enthusiasm.
-
-        RESUME: {resume_json}
-        JOB DESCRIPTION: {job_description_text}
-        """
+        prompt = prompt = self.render_prompt("cover_letter_prompt.txt", {
+            "resume_json": resume_json,
+            "job_extraction_json": job_extraction,
+            "brand_statement_json": brand_data
+        })
         response = openai.ChatCompletion.create(
             model="gpt-4", messages=[{"role": "user", "content": prompt}]
         )

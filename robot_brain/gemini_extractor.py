@@ -13,12 +13,13 @@ class GeminiExtractor:
         else:
             raise ValueError("Gemini API key required")
 
-        self.model = genai.GenerativeModel('gemini-pro')
+        self.model = genai.GenerativeModel('gemini-2.5-pro')
         self.prompt_template = self._load_prompt_template()
 
     def _load_prompt_template(self):
         """Load the extraction prompt from file"""
-        prompt_file = Path(__file__).parent.parent / "prompts" / "extraction_prompt.txt"
+        prompt_file = Path("prompts") / "extraction_prompt.txt"
+
 
         if not prompt_file.exists():
             raise FileNotFoundError(f"Extraction prompt file not found: {prompt_file}")

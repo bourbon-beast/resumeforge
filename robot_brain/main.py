@@ -7,7 +7,7 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
-
+from models.openai_model import OpenAIModel
 from dotenv import load_dotenv
 from gemini_extractor import GeminiExtractor
 
@@ -148,6 +148,30 @@ def main():
 
         print("🎉 Job analysis complete!")
         print(f"📁 Results saved to: {output_path}")
+
+        # === Continue pipeline ===
+        print("🧠 Initializing OpenAI model...")
+        openai_key = os.getenv("OPENAI_API_KEY")
+        if not openai_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set.")
+
+        model = OpenAIModel(api_key=openai_key)
+
+        # Use raw job description text
+        print("📄 Generating tailored resume...")
+        tailored_resume = model.tailor_resume(resume_data, job_description)
+
+        print("✉️ Generating cover letter...")
+        cover_letter = model.generate_cover_letter(resume_data, job_description)
+
+        # Save outputs
+        with open(output_path / "tailored_resume.txt", "w", encoding="utf-8") as f:
+            f.write(tailored_resume)
+
+        with open(output_path / "cover_letter.txt", "w", encoding="utf-8") as f:
+            f.write(cover_letter)
+
+        print("✅ Tailored resume and cover letter saved.")
 
         # TODO: Next steps
         print("\n🔄 Next steps:")
