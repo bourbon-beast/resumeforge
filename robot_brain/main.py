@@ -7,9 +7,10 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
-from models.openai_model import OpenAIModel
+
 from dotenv import load_dotenv
 from gemini_extractor import GeminiExtractor
+from models.openai_model import OpenAIModel
 
 load_dotenv()
 print(f"Debug: GEMINI_API_KEY = {os.getenv('GEMINI_API_KEY')}")
@@ -162,7 +163,11 @@ def main():
         tailored_resume = model.tailor_resume(resume_data, job_description)
 
         print("✉️ Generating cover letter...")
-        cover_letter = model.generate_cover_letter(resume_data, job_description)
+        cover_letter = model.generate_cover_letter(
+            resume_json=resume_data,
+            job_extraction_json=job_extraction,
+            brand_statement_json=brand_data,
+        )
 
         # Save outputs
         with open(output_path / "tailored_resume.txt", "w", encoding="utf-8") as f:
