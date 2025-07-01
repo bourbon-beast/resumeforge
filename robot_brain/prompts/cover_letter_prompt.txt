@@ -1,3 +1,5 @@
+# Cover Letter Prompt Template
+
 You are a professional job application assistant. Write a personalized, compelling cover letter for the role described below.
 
 Use the candidate's resume to highlight relevant experience and accomplishments.
