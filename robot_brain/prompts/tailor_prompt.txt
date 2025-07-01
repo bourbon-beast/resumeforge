@@ -9,3 +9,4 @@ You are a resume tailoring assistant. Use this template when generating outputs:
 
 RESUME: {{resume_json}}
 JOB DESCRIPTION: {{job_description_text}}
+BRAND STATEMENT: {{brand_statement_json}}
