@@ -1,149 +1,133 @@
-import os
+import google.generativeai as genai
 import json
-import requests
-from typing import Dict, Any, Optional
+import os
+from pathlib import Path
 
-class GeminiJobExtractor:
-    """Extract structured job information using Google Gemini API"""
-    
-    def __init__(self):
-        self.api_key = os.getenv('GEMINI_API_KEY')
-        if not self.api_key:
-            raise ValueError("GEMINI_API_KEY environment variable not set")
-        
-        self.base_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-    
-    def extract_job_details(self, job_description: str) -> Dict[str, Any]:
+class GeminiExtractor:
+    def __init__(self, api_key=None):
+        """Initialize Gemini extractor with API key"""
+        if api_key:
+            genai.configure(api_key=api_key)
+        elif os.getenv('GEMINI_API_KEY'):
+            genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
+        else:
+            raise ValueError("Gemini API key required")
+
+        self.model = genai.GenerativeModel('gemini-pro')
+        self.prompt_template = self._load_prompt_template()
+
+    def _load_prompt_template(self):
+        """Load the extraction prompt from file"""
+        prompt_file = Path(__file__).parent.parent / "prompts" / "extraction_prompt.txt"
+
+        if not prompt_file.exists():
+            raise FileNotFoundError(f"Extraction prompt file not found: {prompt_file}")
+
+        with open(prompt_file, 'r', encoding='utf-8') as f:
+            return f.read().strip()
+
+    def extract_job_info(self, job_description):
         """
-        Extract structured job information from job description text
-        
+        Extract structured information from job description
+
         Args:
-            job_description: Raw job description text
-            
+            job_description (str): Raw job description text
+
         Returns:
-            Dictionary with extracted job details
+            dict: Extracted job information with basic_info and personality_signals
         """
-        prompt = self._build_extraction_prompt(job_description)
-        
-        payload = {
-            "contents": [{
-                "parts": [{"text": prompt}]
-            }],
-            "generationConfig": {
-                "temperature": 0.1,  # Low temperature for consistent extraction
-                "maxOutputTokens": 1000
-            }
-        }
-        
         try:
-            print(f"🌐 Calling Gemini API...")
-            response = requests.post(
-                f"{self.base_url}?key={self.api_key}",
-                headers={'Content-Type': 'application/json'},
-                json=payload,
-                timeout=30
-            )
-            response.raise_for_status()
-            
-            result = response.json()
-            print(f"📦 Raw API response: {result}")
-            content = result['candidates'][0]['content']['parts'][0]['text']
-            print(f"📝 Extracted content: {content}")
-            
-            # Clean up markdown formatting if present
-            content = content.strip()
-            if content.startswith('```json'):
-                content = content[7:]  # Remove ```json
-            if content.endswith('```'):
-                content = content[:-3]  # Remove ```
-            content = content.strip()
-            
-            # Parse the JSON response
-            extracted_data = json.loads(content)
-            return extracted_data
-            
-        except requests.RequestException as e:
-            print(f"API request failed: {e}")
+            # Combine prompt template with job description
+            full_prompt = f"{self.prompt_template}\n\nJOB DESCRIPTION TO ANALYZE:\n{job_description}"
+
+            # Generate response
+            response = self.model.generate_content(full_prompt)
+
+            # Parse JSON response
+            result = self._parse_response(response.text)
+
+            # Validate structure
+            self._validate_response(result)
+
+            return result
+
+        except Exception as e:
+            print(f"Error extracting job info: {str(e)}")
             return self._get_fallback_structure()
-        except (json.JSONDecodeError, KeyError) as e:
-            print(f"Failed to parse API response: {e}")
-            return self._get_fallback_structure()
-    
-    def _build_extraction_prompt(self, job_description: str) -> str:
-        """Build the prompt for job information extraction"""
-        return f"""
-Extract the following information from this job description and return ONLY valid JSON:
 
-{{
-  "company_name": "string or null",
-  "job_title": "string or null", 
-  "location": "string or null",
-  "work_type": "remote/hybrid/onsite or null",
-  "employment_type": "full-time/part-time/contract/freelance or null",
-  "salary_range": "string or null",
-  "experience_level": "entry/mid/senior/lead/executive or null",
-  "required_skills": ["array of key required skills"],
-  "nice_to_have_skills": ["array of preferred skills"],
-  "key_responsibilities": ["array of main responsibilities"],
-  "education_requirements": "string or null",
-  "industry": "string or null",
-  "team_size": "string or null",
-  "reporting_to": "string or null"
-}}
+    def _parse_response(self, response_text):
+        """Parse the AI response and extract JSON"""
+        try:
+            # Clean up response - remove any markdown formatting
+            cleaned = response_text.strip()
+            if cleaned.startswith('```json'):
+                cleaned = cleaned[7:]
+            if cleaned.startswith('```'):
+                cleaned = cleaned[3:]
+            if cleaned.endswith('```'):
+                cleaned = cleaned[:-3]
 
-Rules:
-- Return ONLY the JSON object, no other text
-- Use null for missing information, don't guess
-- Keep skill lists focused on the most important items
-- Extract exact salary ranges when mentioned
-- Identify the most likely job title if multiple are mentioned
+            # Parse JSON
+            return json.loads(cleaned)
 
-Job Description:
-{job_description}
-"""
-    
-    def _get_fallback_structure(self) -> Dict[str, Any]:
-        """Return empty structure if extraction fails"""
+        except json.JSONDecodeError as e:
+            print(f"Failed to parse JSON response: {e}")
+            print(f"Raw response: {response_text}")
+            raise
+
+    def _validate_response(self, result):
+        """Validate the response has required structure"""
+        required_keys = ['basic_info', 'personality_signals']
+
+        for key in required_keys:
+            if key not in result:
+                raise ValueError(f"Missing required key: {key}")
+
+        # Validate basic_info structure
+        basic_info_keys = ['company', 'job_title', 'key_requirements']
+        for key in basic_info_keys:
+            if key not in result['basic_info']:
+                print(f"Warning: Missing basic_info key: {key}")
+
+        # Validate personality_signals structure
+        if not isinstance(result['personality_signals'], list):
+            raise ValueError("personality_signals must be a list")
+
+        for signal in result['personality_signals']:
+            if not isinstance(signal, dict):
+                continue
+            required_signal_keys = ['signal', 'context', 'category']
+            for key in required_signal_keys:
+                if key not in signal:
+                    print(f"Warning: Missing signal key: {key}")
+
+    def _get_fallback_structure(self):
+        """Return basic structure if extraction fails"""
         return {
-            "company_name": None,
-            "job_title": None,
-            "location": None,
-            "work_type": None,
-            "employment_type": None,
-            "salary_range": None,
-            "experience_level": None,
-            "required_skills": [],
-            "nice_to_have_skills": [],
-            "key_responsibilities": [],
-            "education_requirements": None,
-            "industry": None,
-            "team_size": None,
-            "reporting_to": None,
-            "extraction_failed": True
+            "basic_info": {
+                "company": "Unknown",
+                "job_title": "Unknown",
+                "location": "Unknown",
+                "experience_level": "Unknown",
+                "industry": "Unknown",
+                "key_requirements": [],
+                "main_responsibilities": [],
+                "technical_skills": []
+            },
+            "personality_signals": []
         }
 
-# Usage example:
-if __name__ == "__main__":
-    # Test with sample job description
-    sample_job = """
-    Senior Software Engineer - Backend
-    TechCorp Inc.
-    
-    We're looking for a Senior Software Engineer to join our backend team in Sydney, Australia.
-    This is a full-time remote position with occasional office visits.
-    
-    Requirements:
-    - 5+ years Python experience
-    - Experience with AWS and microservices
-    - Strong SQL skills
-    
-    Nice to have:
-    - Docker experience
-    - Previous startup experience
-    
-    Salary: $120,000 - $150,000 AUD
+# Convenience function for direct usage
+def extract_job_description(job_description, api_key=None):
     """
-    
-    extractor = GeminiJobExtractor()
-    result = extractor.extract_job_details(sample_job)
-    print(json.dumps(result, indent=2))
+    Extract job information using Gemini
+
+    Args:
+        job_description (str): Raw job description text
+        api_key (str, optional): Gemini API key
+
+    Returns:
+        dict: Extracted job information
+    """
+    extractor = GeminiExtractor(api_key)
+    return extractor.extract_job_info(job_description)
