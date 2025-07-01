@@ -160,7 +160,11 @@ def main():
 
         # Use raw job description text
         print("📄 Generating tailored resume...")
-        tailored_resume = model.tailor_resume(resume_data, job_description)
+        tailored_resume = model.tailor_resume(
+            resume_json=resume_data,
+            job_description_text=job_description,
+            brand_statement_json=brand_data,
+        )
 
         print("✉️ Generating cover letter...")
         cover_letter = model.generate_cover_letter(
